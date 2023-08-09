@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Snake Game</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        
+        body{
+            margin: 0;
+            padding: 0;
+
+        }
+        .container{
+            height: 100vh;
+            width: 100%;
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .game-board{
+            height: 83vmin;
+            width: 100vmin;
+            display: grid;
+            grid-template-columns: repeat(16, 1fr);
+            grid-template-rows: repeat(16, 1fr);
+            background-image: url(bg1\ \(1\).jpg);
+            background-repeat: no-repeat;
+            box-shadow: 0 15px 25px rgba(112, 211, 19, 0.6);
+
+
+        }
+        .score{
+            background: #8bc53d;
+            border: 2px solid #FAFAFA;
+            box-shadow: 3px 3px #fafafa;
+            
+            padding: 10px 20px;
+            border-radius: 20px;
+        }
+        .snake{
+            background: #8bc53d;
+            border: 2px solid #43f51683;
+            width: 34px;
+            height: 34px;
+        
+            border-radius: 50%;
+        }
+        .head{
+            background: url(snake.png);
+            background-size: 100% 100%;
+            width: 44px;
+            height: 44px;
+            
+        }
+        .food{
+            background: url(apple.png);
+            width: 34px;
+            height: 34px;
+            background-size: 100% 100%;
+        }
+        .food1{
+            background: url(green.png);
+            width: 34px;
+            height: 34px;
+            background-size: 100% 100%;
+        }
+        .food2{
+            background: url(yellow.png);
+            width: 34px;
+            height: 34px;
+            background-size: 100% 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="score">Score : <span id = "score">0</span></h2>
+        <div class="game-board">
+            
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
